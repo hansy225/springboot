@@ -123,4 +123,11 @@ public class BoardController {
 		return "redirect:list";
 	}
 	
+	@GetMapping("/delete")
+	public String delete(HttpServletRequest request, Model model) {
+		String bno = request.getParameter("boardno");
+		boardService.deleteBoard(bno);
+		return "redirect:list";
+	}
+	
 }
