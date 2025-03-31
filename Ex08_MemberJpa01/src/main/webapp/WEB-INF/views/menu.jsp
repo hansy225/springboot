@@ -19,8 +19,8 @@
 	<a href="insert?username=user3">데이터 추가</a> <br><br>
 	<a href="select?id=1">상세 조회</a> <br><br>
 	<a href="selectAll">전체 조회</a> <br><br>
-	<a href="delete?id=1003">데이터 삭제</a> <br><br>
-	<a href="update?id=1&username='더조은'">데이터 수정</a> <br><br>
+	<a href="delete?id=1004">데이터 삭제</a> <br><br>
+	<a href="update?id=1&username=tjoeun">데이터 수정</a> <br><br>
 	
 </body>
 </html>

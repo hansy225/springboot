@@ -10,10 +10,10 @@
 <body>
 	<h1>Member JPA #01 - Select All</h1>
 	
-	<c:forEach var="m" items="${ members }">
-		아이디 : ${ m.id } <br>
-		이름 : ${ m.username } <br>
-		날짜 : ${ m.createDate } <hr>
+	<c:forEach var="m" items="${members}">
+		아이디 : ${m.id}<br>
+		이름 : ${m.username}<br>
+		날짜 : ${m.createDate}<hr>
 	</c:forEach>
 	
 </body>
