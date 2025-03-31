@@ -31,5 +31,5 @@ insert into jpapaging values( jpapaging_seq.nextval, 'user15@test.com', 'user22'
 insert into jpapaging values( jpapaging_seq.nextval, 'user16@test.com', 'user23');
 insert into jpapaging values( jpapaging_seq.nextval, 'user15@test.com', 'user24');
 
-
+commit;
 
