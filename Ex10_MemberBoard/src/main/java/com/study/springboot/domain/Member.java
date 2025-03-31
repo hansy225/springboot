@@ -18,22 +18,21 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-@Entity(name="MemberJpa2")
+@Entity(name="Member1")
 @EntityListeners(AuditingEntityListener.class)
 public class Member {
 	@Id
-	private String id;
+	private String id;	
 	private String name;
 	private String password;
-	
-	// 엔티티가 생성된 시간
-	@CreatedDate  // 엔티티가 생성된 시간 저장
-	private LocalDateTime cteateAt;
 
-	// 엔티티가 수정된 시간
-	@LastModifiedDate  // 엔티티가 수정될 때 수정된 시간 저장
-	@Column()
-	private LocalDateTime updateAt;
+	// 엔티티가 생성된 시간
+	@CreatedDate		// 엔티티가 생성된 시간 저장
+	@Column(name="created_at")
+	private LocalDateTime createdAt;
 	
+	// 엔티티가 수정된 시간
+	@LastModifiedDate	// 엔티티가 수정될 때 수정된 시간 저장
+	@Column(name="updated_at")
+	private LocalDateTime updatedAt;
 }

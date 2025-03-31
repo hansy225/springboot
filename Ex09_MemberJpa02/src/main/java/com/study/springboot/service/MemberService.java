@@ -66,6 +66,7 @@ public class MemberService {
 		return memberRepository.findByNameLikeOrderByNameDesc(name2);
 	}
 
+
 	public List<Member> selectByNameLikeSort(String name2, Sort sort) {
 		return memberRepository.findByNameLike(name2, sort);
 	}

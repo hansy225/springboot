@@ -1,5 +1,7 @@
 package com.study.springboot.controller;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,9 +28,13 @@ public class MemberController {
 		model.addAttribute("member", result);
 		return "memberEnroll";
 	}
-	
+
 	@PostMapping("/memUpdate")
 	public String memUpdate(Member member, Model model) {
+		Optional<Member> rm = memberService.selectById(member.getId());
+		Member m = rm.get();
+		member.setCreatedAt(m.getCreatedAt());
+		
 		Member result = memberService.insert(member);
 		model.addAttribute("member", result);
 		return "memberEnroll";

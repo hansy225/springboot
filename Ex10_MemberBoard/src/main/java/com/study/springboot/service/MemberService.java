@@ -1,10 +1,8 @@
 package com.study.springboot.service;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.study.springboot.domain.Member;
@@ -17,6 +15,12 @@ public class MemberService {
 	MemberRepository memberRepository;
 
 	public Member insert(Member member) {
-		return null;
+		return memberRepository.save(member);
 	}
+
+	public Optional<Member> selectById(String id) {
+		return memberRepository.findById(id);
+	}
+
+	
 }

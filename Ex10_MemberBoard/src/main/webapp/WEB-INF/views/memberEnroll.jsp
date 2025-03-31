@@ -7,10 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Member JPA #02 - Update</h1>
-	
-	아이디 : ${member.id}<br><br>
-	이름 : ${member.username}<br><br>
-	날짜 : ${member.createDate}<br><br>
+	<h1>회원 등록 완료</h1>
+	ID : ${member.id}<br>
+	NAME : ${member.name}<br>
+	생성된 날짜 : ${member.createdAt}
 </body>
 </html>

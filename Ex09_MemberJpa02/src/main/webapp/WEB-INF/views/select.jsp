@@ -8,7 +8,7 @@
 <title>Select</title>
 </head>
 <body>
-	<h1>Member JPA #02 - Select</h1>
+	<h1>Member JPA #01 - Select</h1>
 	
 	<c:if test="${member != null}">
 		아이디 : ${member.id}<br><br>

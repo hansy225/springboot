@@ -7,10 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Member JPA #02 - Update</h1>
+	<h1>게시판 글등록</h1>
 	
-	아이디 : ${member.id}<br><br>
-	이름 : ${member.username}<br><br>
-	날짜 : ${member.createDate}<br><br>
+	제목 : ${board.title}<br><br>
+	내용 : ${board.content}<br><br>
+	작성자 : ${board.member}<br><br>
+	작성자 : ${board.member.getId()}<br><br>
 </body>
 </html>
