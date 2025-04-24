@@ -34,8 +34,10 @@ public class UserController {
 
     // ID로 사용자 조회
     @GetMapping("/{id}")
-    public User getUserById(@PathVariable("id") String id) {
-        return userRepository.findById(id).orElse(null);
+    public ResponseEntity<User> getUserById(@PathVariable("id") String id) {
+        return userRepository.findById(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).body(null));
     }
 
     // 사용자 수정

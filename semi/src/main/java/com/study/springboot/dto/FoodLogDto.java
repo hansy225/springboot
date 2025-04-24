@@ -16,4 +16,12 @@ public class FoodLogDto {
     private int totalCalories;
     private String mealTime;
     private LocalDateTime logDate;
+    private String foodName;
+
+    public FoodLogDto(Long foodId, String mealTime, String foodName, int totalCalories) {
+        this.foodId = foodId;
+        this.mealTime = mealTime;
+        this.foodName = foodName;
+        this.totalCalories = totalCalories;
+    }
 }
