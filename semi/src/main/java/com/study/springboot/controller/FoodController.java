@@ -1,5 +1,6 @@
 package com.study.springboot.controller;
-import com.study.springboot.dto.DailyCaloriesDto;
+
+import com.study.springboot.dto.CaloriesDto;
 import com.study.springboot.entity.Food;
 import com.study.springboot.service.FoodLogService;
 import com.study.springboot.service.FoodService;
@@ -19,9 +20,10 @@ public class FoodController {
     @Autowired
     private FoodLogService foodLogService;
 
+    // 🔧 수정된 부분: @RequestParam에 "userId" 명시
     @GetMapping("/total-calories")
-    public List<DailyCaloriesDto> getTotalCalories(@RequestParam("userId") String userId) {
-        return foodLogService.getTotalCaloriesGroupedByDate(userId);
+    public List<CaloriesDto> getTotalCalories(@RequestParam("userId") String userId) {
+        return foodLogService.getDailyCaloriesByUser(userId);
     }
 
     @GetMapping

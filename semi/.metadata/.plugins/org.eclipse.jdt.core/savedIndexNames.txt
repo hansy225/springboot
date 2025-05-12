@@ -1,0 +1,1 @@
+INDEX VERSION 1.134+C:\Users\tj\hsy\springboot\semi\.metadata\.plugins\org.eclipse.jdt.core

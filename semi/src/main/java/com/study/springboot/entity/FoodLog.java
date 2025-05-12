@@ -30,8 +30,4 @@ public class FoodLog {
 
     @Column(name = "LOG_DATE")
     private LocalDateTime logDate;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "FOOD_ID", insertable = false, updatable = false)
-    private Food food;
 }

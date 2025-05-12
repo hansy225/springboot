@@ -1,8 +1,12 @@
 package com.study.springboot.repository;
 
-import com.study.springboot.entity.User;
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
 
-public interface UserRepository extends JpaRepository<User, String> {
-    // 기본적인 CRUD 메서드는 JpaRepository에서 제공됨
+import org.springframework.data.repository.CrudRepository;
+
+import com.study.springboot.entity.User;
+
+public interface UserRepository extends CrudRepository<User, String> {
+	List<User> findAllByPasswordHash(String passwordHash);
+	
 }
